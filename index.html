@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOT FOR WEB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="#main">Main</a>
+        <a href="#fields">Fields</a>
+        <a href="#media">Media</a>
+        <a href="#poem">Poem</a>
+        <a href="#files">Files</a>
+        <a href="#canvas">Canvas</a>
+    </nav>
+    <section id="main">
+        <aside>
+            <h1>Ласкаво просимо</h1>
+            <p>Хочеш пограти в Престоли?</p>
+        </aside>
+    </section>
+    <section id="fields">
+            <fieldset>
+                <legend>Заповни анкету</legend>
+                <form>
+                    <div class="flexContainer">
+                        <div class="first-col">
+                            <div>
+                                <label>Імя</label>
+                                <input type="text" title="name">
+                            </div>
+                            <div>
+                                <label>E-mail</label>
+                                <input type="email" title="e-mail">
+                            </div>
+                            <div>
+                                <label>Ви дивились Гру Престолів?</label>
+                                <label class="container">
+                                    <input type="radio" name="radio">
+                                   <a> Так</a>
+                                </label>
+                                <label class="container">
+                                    <input type="radio" name="radio">
+                                    <a>Ні</a>
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="second-col">
+                            <div>
+                                <label>
+                                    Виберіть колір
+                                </label>
+                                <input type="color" title="color">
+                            </div>
+                            <div>
+                                <label>Наскількі вам сподобалась Гра Престолів</label>
+                                <input type="range" list="tickmarks" title="range">
+
+                                <datalist id="tickmarks">
+                                    <option value="0" label="0%">
+                                    <option value="10" label="10%">
+                                    <option value="20" label="20%">
+                                    <option value="30" label="30%">
+                                    <option value="40" label="40%">
+                                    <option value="50" label="50%">
+                                    <option value="60" label="60%">
+                                    <option value="70" label="70%">
+                                    <option value="80" label="80%">
+                                    <option value="90" label="90%">
+                                    <option value="100" label="100%">
+                                </datalist>                        </div>
+                            <div>
+                                <label>Вам сподобався фінал?</label>
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <a>Так</a>
+                                </label>
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <a>Ні</a>
+                                </label>
+                            </div>
+                            <div>
+                                <label>Номер телефону</label>
+                                <input type="tel" title="number">
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div>
+                        <input type="submit">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </section>
+    <section id="media">
+        <div>
+            <h1>Lannister vs <TABLE></TABLE>Targaryen</h1>
+            <div id="places">
+                <div>
+                    <h1>#1</h1>
+                    <div ondrop="drop(event)" ondragover="allowDrop(event)" id="first"></div>
+                </div>
+                <div>
+                    <h1>#2</h1>
+                    <div ondrop="drop(event)" ondragover="allowDrop(event)" id="second"></div>
+                </div>
+              </div>
+            <div class="dragContainer" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img draggable="true" ondragstart="drag(event)" alt="cat" id="drag1" class="drag" src="./dar_har.png">
+                <img draggable="true" ondragstart="drag(event)" alt="dog" id="drag2" class="drag" src="./jhon.png">
+            </div>
+        </div>
+    </section>
+    <section id="poem">
+        <h2>Дженни из Старых Камней</h2>
+        <article id="ajax">
+        </article>
+        <button onclick="load()">Click to see poem</button>
+        <h1>Персонажі та їх дома</h1>
+        <button id="json">Показати вміст</button>
+        <table id="json1"></table>
+        <h1>Трейлери до сезону</h1>
+        <button id="xml">Нажми на мене</button>
+        <div>
+        <table id="xmlTable"></table>
+        </div>
+    </section>
+    <section id="files">
+        <h2>Some music?</h2>
+            <div>
+                <p>Jenny of Oldstones</p>
+                <audio controls="controls" src="./Florence_amp_The_Machine_-_Jenny_Of_Oldstones(uzimusic.ru).mp3" id="au1">
+                    <p class="error">Sorry</p>
+                </audio>
+            </div>
+            <h2>Download your music</h2>
+            <div>
+                <audio id="sound" controls="controls">
+                    <p class="error">Sorry</p>
+                </audio>
+                <br>
+                <input type="file" id="audioInput"/>
+            </div>
+                 <h3>Вибери картинку під музику</h3>
+                 <input type="file" id="pic" accept="image/*">
+                 <ol></ol>
+    </section>
+    <section id="canvas">
+        <div id="holst">
+            <canvas id="hippi">
+                <p class="error">Sorry</p>
+            </canvas>
+        </div>
+        <p><canvas id="canvasGIF" ></canvas></p>
+        <div class="drawing">
+            <canvas id="risovalka">
+                <p class="error">Sorry</p>
+            </canvas>
+            <ul class="forButtons">
+                <li>
+                    <p>Clear Canvas</p>
+                    <button id="eraser">Eraser</button>
+                    <button id="clearCanvas">Clear</button>
+                </li>
+                <li>
+                    <p>Color</p>
+                    <button id="colorRed">Red</button>
+                    <button id="colorBlue">Blue</button>
+                    <button id="colorYellow">Yellow</button>
+                    <button id="colorGrey">Grey</button>
+                </li>
+                <li>
+                    <p>Size</p>
+                    <button id="smallS">Small</button>
+                    <button id="normalS">Normal</button>
+                    <button id="largeS">Big</button>
+                    <button id="hugeS">Huge</button>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+
+</body>
+</html>
